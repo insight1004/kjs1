@@ -1,0 +1,350 @@
+@charset "UTF-8";
+@import url("http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Noto Sans KR:100,300,400,500,700");
+
+html,body{position:relative; width:100%; height:100%; background:#fff}
+html,body,ul,ol,img,div,span,iframe,a,p{margin:0; padding:0; border:0; outline:none}
+html,body,ul,ol,li,img,div,span,iframe,a,p,input,textarea,select,i{
+    font-family:'Roboto','Noto Sans KR', sans-serif; font-weight:400; font-style:normal; font-size:14px; word-break:keep-all; color:#222;
+}
+a{text-decoration:none; color:#666; font-family:'Roboto','Noto Sans KR', sans-serif}
+a:hover,a:active,a:focus{text-decoration:none}
+img{border:none; max-width:100%; width:auto; height:auto}
+ul,ol{list-style:none}
+iframe,object,video,embed{position:relative; top:0; left:0; max-width:100%}
+
+.wrap{position:relative; padding:0; margin:0; width:100%; min-width:1200px; min-height:100%}
+
+.login_wrap{
+    position:relative; background:#000; padding:0; margin:0; width:100%; min-width:320px; min-height:100%;
+    background:url('../images/login_bg.jpg') no-repeat center; background-size:cover;
+}
+.login_box{
+    position:absolute; top:50%; left:50%; margin-top:-230px; margin-left:-150px;
+    width:300px; text-align:center
+}
+.login_box .login_bi{display:inline-block}
+.login_box .login_input{margin-top:50px}
+.login_box .login_input>div{position:relative}
+.login_box .login_input i{position:absolute; top:10px; left:10px; color:rgba(255,255,255,0.3)}
+.login_box .login_input input{
+    width:100%; height:50px; padding:0 20px 0 40px; color:#fff; font-size:16px;
+    background:transparent; border:0; border-bottom:1px solid rgba(255,255,255,0.3);
+}
+.login_box .login_input input::-webkit-input-placeholder{color:#f0f0f0; font-size:14px}
+.login_box .login_input input:-ms-input-placeholder{color:#f0f0f0; font-size:14px}
+
+.login_box .login_input button,.login_box .login_input a{
+    display:block; border:none; outline:none; border-radius:3px; 
+    width:100%; height:50px; line-height:50px; color:#fff; font-size:16px; cursor:pointer;
+    margin-bottom:10px
+}
+.login_box .login_input .btn_admin{background:#e1b724}
+.login_box .login_input .btn_pw{background:#222}
+
+/* head area */
+.head_wrap{position:relative; z-index:9; width:100%; height:70px; background:#222; box-shadow:0 3px 5px rgba(0,0,0,0.3)}
+.head_wrap .head_bi{float:left}
+.head_wrap .head_bi .bi_img{float:left; width:120px; margin:0 20px; padding-top:16px}
+.head_wrap .head_bi h4{float:left; color:#fff; font-size:16px; font-weight:400; letter-spacing:0; margin-top:24px}
+.head_wrap .head_info{float:right}
+.head_wrap .head_info h5{display:inline-block; color:#fff; font-weight:300; letter-spacing:0; margin-right:50px}
+.head_wrap .head_info a{display:inline-block; width:100px; height:30px; line-height:30px; font-size:14px; font-weight:400; text-align:center; margin:20px 10px 0 0}
+.head_wrap .head_info a.btn_info{background:#d9d9d9; color:#444}
+.head_wrap .head_info a.btn_out{background:#f4514a; color:#fff}
+
+/* Side GNB */
+.sidebar{position:absolute; z-index:6; padding-top:70px; height:100%; box-sizing:border-box}
+.sidebar,.side_bg{position:absolute; background:#f0f0f0; top:0; left:0; width:200px; height:100%; border-right:1px solid #d9d9d9; box-sizing:border-box}
+.sidebar .nav .caret{
+    display:inline-block; width:0; height:0; margin:20px 10px 0 0; vertical-align:middle;
+    border-left:4px solid #444; border-top:4px solid transparent; border-bottom:4px solid transparent; box-sizing: border-box;
+}
+.sidebar .nav .has-sub{width:100%; border-bottom:1px solid #d9d9d9}
+.sidebar .nav .has-sub.on,
+.sidebar .nav .has-sub.active,
+.sidebar .nav .has-sub.expand,
+.sidebar .nav .has-sub:hover{background:#fff; border-right:1px solid #fff;}
+
+.sidebar .nav .has-sub>a{position:relative; display:block; height:50px; line-height:50px}
+.sidebar .nav .sub-menu{display:none; background:#fff; color:#444; padding:10px 0; border-top:1px dotted #d9d9d9}
+.sidebar .nav .sub-menu a{display:block; color:#999}
+.sidebar .nav .sub-menu li{line-height:30px}
+.sidebar .nav .sub-menu b{color:#999; height:30px; line-height:28px; font-size:11px; margin:0 10px 0 30px; vertical-align:middle}
+.sidebar .nav .sub-menu a:hover,
+.sidebar .nav .sub-menu a:hover b,
+.sidebar .nav .sub-menu a.on b,
+.sidebar .nav .sub-menu a.on{color:#444}
+
+.sidebar .nav h5{display:inline-block; font-weight:400; color:#444; transition:all 0.2s ease}
+.sidebar .nav i{font-size:22px; color:#444; line-height:47px; height:50px; transition:all 0.2s ease}
+
+.sidebar .nav .active .ontab{
+    position:absolute; left:0; width:0; height:100%;
+    border-right:1px solid #fff;
+}
+.sidebar .active .caret{border-top:4px solid #444; border-right:4px solid transparent; border-left:4px solid transparent; box-sizing: border-box;}
+.sidebar .active .sub-menu{display:block}
+.sidebar .active h5,.sidebar .active i{color:#484848}
+.sidebar .nav .has-sub.active .caret,.sidebar .nav .has-sub.expand .caret{
+    border-top:4px solid #444; border-right:4px solid transparent; border-left:4px solid transparent; box-sizing: border-box;
+}
+
+/* contents */
+.con_wrap{width:1200px; height:100%; padding:50px 0 0 250px; box-sizing:border-box}
+.con_wrap h4.title{margin-bottom:15px}
+
+.mban_wrap{position:relative; width:100%; min-height:435px}
+.mban_wrap .mban_select{position:absolute; z-index:6; left:20px; bottom:20px}
+.mban_wrap .mban_select li{position:relative; float:left; width:190px; height:80px; margin-right:10px; opacity:0.5}
+.mban_wrap .mban_select li.active{opacity:1; border:1px solid #e1b724; box-sizing:border-box}
+.mban_wrap .mban_select .mban_thumb{overflow:hidden}
+.mban_wrap .mban_select .mban_thumb img{width:100%; height:100%}
+
+.mban_wrap .mban_select a.btn_edit{display:none}
+.mban_wrap .mban_select .active a.btn_edit{
+    display:block; position:absolute; z-index:7; top:14px; right:10px; width:50px; height:50px; line-height:50px; border-radius:50%; 
+    background:#f4514a; text-align:center; font-size:14px; color:#fff;
+}
+.mban_wrap .mban_select .active a.btn_edit:hover{background:#d1312a}
+
+.mban_wrap .mban_select .mban_add{position:relative; background:#fff; text-align:center; opacity:1}
+.mban_wrap .mban_select .mban_add a{display:block; width:100%; height:100%}
+.mban_wrap .mban_select .mban_add i{opacity:0.1; margin-top:12px}
+.mban_wrap .mban_select .mban_add p{position:absolute; top:30px; left:50%; margin-left:-34px; color:#777; font-size:14px; font-weight:400}
+.mban_wrap .mban_select .mban_add:hover p{color:#222; font-weight:500}
+
+.mban_wrap .mban_view{width:100%}
+.mban_wrap .mban_view div{position:absolute; z-index:5; top:40px; left:0; width:950px; height:395px; overflow:hidden; opacity:0; transition:all 0.3s ease}
+.mban_wrap .mban_view div.in{opacity:1; transition:all 0.3s ease}
+.mban_wrap .mban_view img{width:100%; height:100%}
+
+.table_wrap{position:relative; width:100%; overflow:hidden; padding-bottom:50px}
+.table_wrap .tit_wrap{width:100%; height:40px}
+.table_wrap .tit_wrap h4{float:left}
+.table_wrap .tit_wrap a.b_more{float:right; font-size:13px; color:#777; margin-top:7px}
+
+/* board table */
+table{width:100%; border:0; border-collapse:collapse;}
+table th,td{height:40px; padding:5px; box-sizing:border-box; font-size:13px; letter-spacing:-1px; text-align:center}
+table th{background:#f0f0f0; color:#444; font-weight:500; border-top:1px solid #444; border-bottom:1px solid #444}
+table td{color:#777; border-bottom:1px solid #d9d9d9}
+table tr:last-child td{border-bottom:1px solid #444}
+table tr:hover td{background:#f9f9f9}
+table td a{display:block}
+table td a:hover{color:#222}
+
+table tr.del td,table tr.del td a{background:#feeded; color:#b0b0b0}
+table tr.del2 td,table tr.del2 td a{color:#f4514a}
+table td.del{color:#f4514a}
+
+table a{width:400px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden}
+table.ui-datepicker-calendar a{width:inherit}
+
+/* admin sub */
+.panel input{height:40px; width:80%}
+.panel{border:1px solid #d9d9d9; background:#f0f0f0; padding:15px 25px 5px 25px; overflow:hidden}
+.panel li{float:left; width:10%; margin-bottom:10px; line-height:40px}
+.panel li:nth-child(2n){float:left; width:40%; line-height:20px}
+
+.btn_wrap{width:100%; padding:30px; text-align:center; box-sizing:border-box}
+.btn_wrap a{display:inline-block; margin:0 5px; width:150px; height:40px; line-height:40px; color:#fff; text-align:center}
+
+a.b_num{float:right; font-size:13px; color:#1a93d9; margin-top:7px}
+
+.panel div{position:relative}
+.panel li{min-height:40px}
+.panel .search_input div{float:left}
+.panel .search_input select{border:1px solid #e0e0e0; width:120px; height:40px; outline:none; margin-right:10px}
+.panel .search_input select:focus{border:1px solid #999}
+.panel .search_input input[type=text]{width:220px; padding-right:30px; box-sizing:border-box}
+.panel .search_input i{position:absolute; top:10px; left:190px}
+
+.table_wrap a.b_add{display:inline-block; width:150px; height:40px; line-height:40px; font-size:16px; text-align:center; color:#fff}
+.table_wrap .foot_btn{width:100%; margin:30px 0; text-align:right}
+
+.panel .select_input select{border:1px solid #e0e0e0; width:150px; height:40px; outline:none;}
+.panel .phone_input div{float:left}
+.panel .phone_input select{display:inline-block; width:80px; height:40px}
+.panel .phone_input input[type=text]{display:inline-block; width:80px; padding-right:30px; box-sizing:border-box}
+
+.panel.adds li:nth-child(2n){float:left; width:90%}
+.panel.adds input.input_add{display:inline-block; width:270px}
+.panel.adds p{display:inline-block; font-size:12px; margin-left:15px}
+.panel.adds p.t_red{color:#f4514a}
+.panel.adds p.t_blue{color:#1a93d9}
+
+.panel.mody textarea{width:100%; height:200px}
+.panel.mody li:nth-child(2n){float:left; width:90%; line-height:20px}
+.panel.mody li:nth-child(2),
+.panel.mody li:nth-child(4){float:left; width:40%}
+.panel.mody input.mody_tit{width:100%}
+
+.panel.mody2 textarea{width:100%; height:200px}
+.panel.mody2 li:nth-child(2n){float:left; width:90%; line-height:20px}
+.panel.mody2 li:nth-child(2),
+.panel.mody2 li:nth-child(4),
+.panel.mody2 li:nth-child(6),
+.panel.mody2 li:nth-child(8){float:left; width:40%}
+.panel.mody2 input.mody_tit{width:100%}
+
+.panel .attach_file a{display:inline-block; margin:8px 20px 0 0; color:#999}
+.panel .attach_file i{color:#999}
+.panel .attach_file a:hover,
+.panel .attach_file a:hover i{color:#444}
+.panel .ha_wid{float:left; width:40% !important}
+.panel .input_wid input{width:150px}
+
+/* banner edit */
+.mban_wrap .mban_view{width:100%}
+.mban_wrap .mban_view div{position:absolute; z-index:5; top:40px; left:0; min-width:950px; min-height:395px; overflow:hidden; opacity:0; transition:all 0.3s ease}
+.mban_wrap .mban_view div.in{opacity:1; transition:all 0.3s ease}
+
+.mban_edit .edit_ban{position:relative; margin-bottom:30px; height:395px; overflow:hidden}
+.mban_edit .edit_ban img{width:100%; height:100%; display:block}
+
+.mban_edit .edit_ban a{position:absolute; z-index:5; bottom:20px; width:50px; height:50px; line-height:50px; border-radius:50%; text-align:center; font-size:14px; color:#fff}
+.mban_edit .edit_ban a.btn_del{background:#f4514a; right:80px}
+.mban_edit .edit_ban a.btn_del:hover{background:#d1312a}
+.mban_edit .edit_ban a.btn_mody{background:#1a93d9; right:20px}
+.mban_edit .edit_ban a.btn_mody:hover{background:#0a76b5}
+
+.mban_edit .mban_insert{border:2px dotted #d9d9d9; height:350px; text-align:center}
+.mban_edit .mban_insert a{display:block; width:100%; height:100%; padding-top:120px; box-sizing:border-box}
+.mban_edit .mban_insert i{opacity:0.1; transition:all 0.3s ease}
+.mban_edit .mban_insert a:hover i{opacity:1; color:#e2b724}
+
+.mban_wrap .mban_select .mban_add a{display:block; width:100%; height:100%}
+.mban_wrap .mban_select .mban_add i{opacity:0.1; margin-top:12px}
+.mban_wrap .mban_select .mban_add p{position:absolute; top:30px; left:50%; margin-left:-34px; color:#777; font-size:14px; font-weight:400}
+.mban_wrap .mban_select .mban_add:hover p{color:#222; font-weight:500}
+
+/* Footer */
+.footer{width:100%; background:#fff}
+.footer .copy_wrap{width:100%; min-height:140px; border-top:1px solid #e7e7e7; box-sizing:border-box}
+.footer .copy_wrap>div{width:1200px; margin:0 auto; padding-top:30px}
+.footer .copy_wrap .foot_ci{float:left; margin:5px 100px 0 0}
+.footer .copy_wrap ul{float:left}
+.footer .copy_wrap li{float:left; font-size:13px; font-weight:300; color:#777; line-height:20px}
+.footer .copy_wrap .copy_tab{width:1px; height:12px; margin:4px 13px 0 13px; background:#dadada}
+
+/* button */
+a.b_yellow{background:#e1b724}
+a.b_yellow:hover{background:#b38c06}
+a.b_red{background:#f4514a}
+a.b_red:hover{background:#c82821}
+a.b_sgrey{background:#6f8191}
+a.b_sgrey:hover{background:#415566}
+a.b_blue{background:#1a93d9}
+a.b_blue:hover{background:#036daa}
+
+
+/* Plugins - Calender */
+.ui-datepicker{
+    display:none; border:1px solid #999; padding:20px; background:#fff; margin-top:5px;
+    box-shadow:3px 3px 5px rgba(0,0,0,0.3);
+}
+.ui-datepicker-header{position:relative; height:40px; text-align:center}
+.ui-datepicker-header a{position:absolute; cursor:pointer}
+.ui-datepicker-header a span{text-indent:-1000px}
+a.ui-datepicker-prev{left:0}
+a.ui-datepicker-prev span:before{font-family: 'Material Icons'; font-size: 24px; content: "\e5cb"; color:#999}
+a.ui-datepicker-next{right:0}
+a.ui-datepicker-next span:before{font-family: 'Material Icons'; font-size: 24px; content: "\e5cc"; color:#999}
+.ui-datepicker-header a span:hover:before{color:#444}
+.ui-datepicker-title{display:inline-block; margin:0 auto}
+.ui-datepicker-title span{font-size:16px; color:#444; padding:0 5px; font-weight:400}
+table.ui-datepicker-calendar{width:auto; min-width:200px}
+table.ui-datepicker-calendar,table.ui-datepicker-calendar th,table.ui-datepicker-calendar td{border:0}
+table.ui-datepicker-calendar th,table.ui-datepicker-calendar td{width:20px; height:20px; text-align:center}
+table td.ui-datepicker-today{background:#e9e9e9; border-radius:3px}
+table.ui-datepicker-calendar th{background:none; padding:5px 0 10px 0}
+table.ui-datepicker-calendar th span{color:#444; font-weight:700}
+table.ui-datepicker-calendar td:hover{background:#f0f0f0; cursor:pointer}
+table.ui-datepicker-calendar td:first-child a,table.ui-datepicker-calendar th:first-child span{color:#e71707}
+table.ui-datepicker-calendar td:last-child a,table.ui-datepicker-calendar th:last-child span{color:#2184dd}
+
+.daterange{display:inline-block; position:relative}
+.daterange input{display:inline-block; width:120px; padding-right:30px; box-sizing:border-box}
+.daterange i{position:absolute; right:5px; top:5px; color:#666; line-height:30px}
+.daterange label{cursor:pointer}
+table.ui-datepicker-calendar tr:last-child td{border-bottom:0}
+
+.b_mode{display:inline-block; border-radius:3px; padding:0 10px; color:#fff; height:26px; line-height:26px}
+.b_mode.bg_blu{background:#07b1e2}
+.b_mode.bg_orange{background:#f89200}
+.b_mode.bg_purple{background:#be8bf2}
+
+.btn_dblu{background:#46477a; color:#fff}
+.btn_dblu:active,.btn_dblu:focus,.btn_dblu:hover{background:#343567}
+
+/* popup */
+.pop-window{
+    position:fixed; background:rgba(1,1,1,0.7);
+    top:0; right:0; bottom:0; left:0; z-index:9999; opacity:0;
+    display:none; transition:all 0.3s ease;
+}
+.pop-window.in{opacity:1}
+.pop-window .alert {
+    position:relative; margin:200px auto; overflow:hidden;
+    background:#fff; width:350px; height:200px; box-sizing:border-box; 
+}
+.pop-window .alert2{height:230px}
+.pop-window .alert_con{text-align:center; padding:0 20px 10px 20px}
+.pop-window .alert_con i{display:inline-block; font-size:6em; margin-top:20px}
+.pop-window .alert_con p{color:#666}
+.pop-window .modal_foot{width:100%; padding:10px 0; text-align:center; margin-bottom:10px}
+.pop-window .modal_foot a{display:inline-block; width:100px; height:30px; line-height:30px; color:#fff}
+
+.pop-window a.b_red{background:#f4514a}
+.pop-window a.b_sgrey{background:#6f8191}
+.pop-window a.b_blue{background:#1a93d9}
+
+.pop-window i.red{color:#f4514a}
+.pop-window i.blue{color:#1a93d9}
+
+/* modify */
+.pop-window .mban_input {
+    position:relative; margin:200px auto; overflow:hidden;
+    background:#fff; width:440px; height:auto; box-sizing:border-box; 
+}
+.mban_input .input_head{border-bottom:1px solid #f4514a; padding:20px 0 20px 20px; box-sizing: border-box}
+.mban_input .input_head h4{font-size:16px; font-weight:400}
+.mban_input .input_head a{position:absolute; right:20px; top:20px; width:25px; height:25px}
+.mban_input .input_con{padding:10px 20px; overflow:hidden}
+.mban_input .input_con li{float:left; margin-bottom:10px; width:27%; line-height:40px}
+.mban_input .input_con li:nth-child(2n){width:73%}
+.mban_input .input_con input[type=text]{width:100%; height:40px}
+.mban_input .input_con input[type=password]{width:100%; height:40px}
+.mban_input .input_con .input_chk div{display:inline-block; margin-right:20px; padding:5px 0}
+.mban_input .input_con .radio.radio-css label:before{top:16px}
+.mban_input .input_con .radio.radio-css input:checked + label:after{top:22px}
+
+.mban_input .input_con.type2{padding-top:40px; padding-bottom:20px}
+.mban_input .input_con.type2 li{margin-bottom:10px; width:100%; line-height:40px}
+.mban_input .input_con.type3 li:nth-child(3){width:100%; line-height:0}
+.mban_input .input_con.type3 textarea{width:100%; height:80px}
+
+.mban_input .input_con .attach{position:relative}
+.mban_input .input_con .attach input[type=text]{width:165px}
+.mban_input .input_con .attach input[type=file]{display:none}
+.mban_input .input_con .attach span.b_file{
+    position:absolute; display:block; top:0px; left:164px; cursor:pointer; width:60px; height:40px; background:#6f8191;
+    text-align:center; color:#fff; font-size:13px;
+}
+.mban_input .input_con .attach a.b_red{position:absolute; top:0; right:0; display:block; color:#fff; width:60px; height:40px; text-align:center}
+
+/* page button */
+.page{clear:both; margin:30px auto 10px auto; text-align:center}
+.page a{display:inline-block; border:1px solid #dfdfdf; width:40px; height:40px; line-height:40px; background:#fff;}
+.page a.on{border:1px solid #d90125; color:#d90125;}
+.page a:hover{border:1px solid #d90125; color:#d90125;}
+.page a.none{pointer-events:none; opacity:0.3}
+
+.header{position:relative; background:#262d40; width:100%; height:50px}
+.header>div{position:absolute}
+.header a i{color:#fff}
+.header .m_home{top:12px; left:10px}
+.header .m_bi{display:none}
+.header .m_side{top:16px; right:10px}
+.header .m_side span{display:block; width:20px; height:1px; background:#fff; margin-bottom:6px}
+
